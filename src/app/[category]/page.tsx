@@ -5,23 +5,28 @@ const Tops = () =>{
     const bestSell=[
         {
           src:"/pictures/top1.1.jpg",
-          alt:"Dress shirt",
-          title:"Stylish Dress",
-          discription:" Best quality dress shirt for  women.",
+          alt:"Top", 
+          title:"Jeans Jacket",
+          discription:" Best quality dress  for  women.",
           price:200,
+          category:"Tops",
+          Products:"Tops",
         },
         {
           src:"/pictures/top2.jpg",
-          alt:"Brand pants",
-          title:"Stylish Dress Pants",
-          discription:" Best quality dress Pants for  women.",
-          price:250
+          alt:"Tops",
+          title:"Long tops",
+          discription:" Best quality dress for  women.",
+          price:250,
+          category:"Tops",
+          Products:"Tops",
+
      },
         {
           src:"/pictures/top3.jpg",
-          alt:"Shoes",
-          title:"Stylish Shoes",
-          discription:" Best quality top notch shoes for  women.",
+          alt:"Top",
+          title:" Wool Top",
+          discription:" Best quality top notch dress for  women.",
           price:300
      },
      {
@@ -30,20 +35,27 @@ const Tops = () =>{
         title:"Stylish Dress",
         discription:" Best quality dress shirt for  women.",
         price:200,
+        category:"Tops",
+        Products:"Tops",
       },
       {
         src:"/pictures/top5.jpg",
-        alt:"Brand pants",
-        title:"Stylish Dress Pants",
-        discription:" Best quality dress Pants for  women.",
-        price:250
+        alt:"Top",
+        title:"Summer Top",
+        discription:" Best quality dress  for  women.",
+        price:200,
+        category:"Tops",
+        Products:"Tops",
    },
       {
         src:"/pictures/top6.jpg",
-        alt:"Shoes",
-        title:"Stylish Shoes",
-        discription:" Best quality top notch shoes for  women.",
-        price:300
+        alt:"Top",
+        title:" Style Tops", 
+        discription:" Best quality top notch dress for  women.",
+        price:300,
+        category:"Tops",
+        Products:"Tops",
+
    },
    
       ]
@@ -62,7 +74,7 @@ const Tops = () =>{
         {
 
       bestSell.map((item,i)=>(
-        <SellingCard key={i} src={item.src} alt={item.alt} title={item.title} discription={item.discription} price={item.price}/>))
+        <SellingCard key={i} src={item.src} alt={item.alt} title={item.title} discription={item.discription} price={item.price} category={item.category} Products={item.Products}/>))
       }
 
       </div>

@@ -5,20 +5,22 @@ import { HiShoppingCart } from "react-icons/hi";
 import { FaHeart } from "react-icons/fa";
 import Link from 'next/link'
 
-export const SellingCard = ({src,alt,title,discription,price}:{
+export const SellingCard = ({src,alt,title,discription,price,category,Products}:{
     src:string,
     alt:string,
     title:string,
     discription:string,
     price:number,
+    category:string,
+    Products:string
   
 }) => {
   return (
     <div>
-    <Link href={'/'}>
+    <Link href={`/${category}/${Products}`}>
       {/* image div */}
-       <div className="w-[350px] h-[35rem] p-4 mx-auto shadow-md rounded-xl relative group">
-    <div className='block relative h-[23rem] rounded overflow-hidden'>
+       <div className="w-[350px]  h-[23rem] p-4 mx-auto shadow-md rounded-xl relative group hover:scale-105 duration-300">
+    <div className='block relative h-[21rem] rounded overflow-hidden'>
       <Image src={src} alt="Nothing" width={400} height={400}/>
     </div>
     </div>
@@ -33,13 +35,14 @@ export const SellingCard = ({src,alt,title,discription,price}:{
     </div>
     </Link>
     {/* button */}
-    <div>
+    <div className="flex justify-between">
    
-      <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl absolute bottom-2 right-2'><HiShoppingCart className='mr-2 w-2 h-4 group-hover:text-myOrange'/>Add to Cart</Button>
+      <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl  bottom-2 right-2'><HiShoppingCart className='mr-2 w-2 h-4 group-hover:text-myOrange'/>Add to Cart</Button>
       
-      <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl absolute bottom-2 left-2'><FaHeart className='ml-2 w-4 h-4 group-hover:text-myOrange'/>Buy Now</Button>
+      <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl bottom-2 left-2'><FaHeart className='ml-2 w-4 h-4 group-hover:text-myOrange'/>Buy Now</Button>
     </div>
   </div>
+   
   
   
   

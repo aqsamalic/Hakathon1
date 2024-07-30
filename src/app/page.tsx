@@ -9,7 +9,7 @@ import Selling from "@/components/Selling";
 
 export default function Home() {
   return (
-        <div className="h-[80vh] ">
+        <div>
            <Hero/>
            <Services/>
            <Promotion/>

@@ -10,6 +10,8 @@ import { SellingCard } from './SellingCard';
       title:"Stylish Dress",
       discription:" Best quality dress shirt for  women.",
       price:200,
+      category:"Tops",
+      Products:"Tops",
      
     },
     {
@@ -18,6 +20,8 @@ import { SellingCard } from './SellingCard';
       title:"Stylish Dress Pants",
       discription:" Best quality dress Pants for  women.",
       price:250,
+      category:"Pants",
+      Products:"Pants",
     },
     {
       src:"/pictures/shoe5.jpg",
@@ -25,6 +29,8 @@ import { SellingCard } from './SellingCard';
       title:"Stylish Shoes",
       discription:" Best quality top notch shoes for  women.",
       price:300,
+      category:"Shoes",
+      Products:"Shoes",
    
  },
   ]
@@ -42,9 +48,8 @@ import { SellingCard } from './SellingCard';
       {/* selling section */}
       <div className='flex flex-wrap justify-center gap-5'>
         {
-
-      bestSell.map((item,i)=>(
-        <SellingCard key={i}  src={item.src} alt={item.alt} title={item.title} discription={item.discription} price={item.price} />))
+         bestSell.map((item,i)=>(
+        <SellingCard key={i}  src={item.src} alt={item.alt} title={item.title} discription={item.discription} price={item.price} category={item.category} Products={item.Products} />))
       }
 
       </div>
