@@ -10,7 +10,8 @@ const Tops = () =>{
           discription:" Best quality dress  for  women.",
           price:200,
           category:"Tops",
-          Products:"Tops",
+          Products:"Tops1",
+        
         },
         {
           src:"/pictures/top2.jpg",
@@ -19,7 +20,8 @@ const Tops = () =>{
           discription:" Best quality dress for  women.",
           price:250,
           category:"Tops",
-          Products:"Tops",
+          Products:"Tops2",
+         
 
      },
         {
@@ -27,7 +29,9 @@ const Tops = () =>{
           alt:"Top",
           title:" Wool Top",
           discription:" Best quality top notch dress for  women.",
-          price:300
+          price:300,
+          category:"Tops",
+          Products:"Tops3",
      },
      {
         src:"/pictures/top4.jpg",
@@ -36,8 +40,8 @@ const Tops = () =>{
         discription:" Best quality dress shirt for  women.",
         price:200,
         category:"Tops",
-        Products:"Tops",
-      },
+        Products:"Tops4",
+     },
       {
         src:"/pictures/top5.jpg",
         alt:"Top",
@@ -45,7 +49,9 @@ const Tops = () =>{
         discription:" Best quality dress  for  women.",
         price:200,
         category:"Tops",
-        Products:"Tops",
+        Products:"Tops5",
+        
+        
    },
       {
         src:"/pictures/top6.jpg",
@@ -54,7 +60,8 @@ const Tops = () =>{
         discription:" Best quality top notch dress for  women.",
         price:300,
         category:"Tops",
-        Products:"Tops",
+        Products:"Tops6",
+       
 
    },
    
@@ -73,8 +80,18 @@ const Tops = () =>{
     <div className='flex flex-wrap justify-center gap-5'>
         {
 
-      bestSell.map((item,i)=>(
-        <SellingCard key={i} src={item.src} alt={item.alt} title={item.title} discription={item.discription} price={item.price} category={item.category} Products={item.Products}/>))
+bestSell.map((item, i) => (
+  <SellingCard
+    key={i}
+    src={item.src}
+    alt={item.alt}
+    title={item.title}
+    discription={item.discription}
+    price={item.price}
+    category={item.category} 
+    Products={item.Products} 
+  />
+))
       }
 
       </div>
