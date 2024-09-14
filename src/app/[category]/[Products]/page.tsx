@@ -1,23 +1,43 @@
 import { Button } from '@/components/ui/button'
 import { Import } from 'lucide-react'
 import React from 'react'
-import { HiShoppingCart } from 'react-icons/hi'
+import { HiShoppingCart,} from 'react-icons/hi'
+import { FaPlus ,FaMinus,FaHeart } from "react-icons/fa";
 import Image from 'next/image'
+import SlugComponent from '@/components/slugComponent';
 
 
 const Product = () => {
   return (
     <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-24 mx-auto">
-    <div className="lg:w-4/5 mx-auto flex flex-wrap hover-lazy-felix">
-     <Image src="/pictures/pant5.jpg" alt="Nothing" width={400} height={400} className="lg:w-1/2 w-full object-cover object-center rounded" />
+    <div className="lg:w-4/5 mx-auto flex flex-wrap">
+    
+     {/* <Image src="/pictures/pant5.jpg" alt="Nothing" width={400} height={400} className="lg:w-1/2 w-full object-cover object-center rounded" /> */}
+     <SlugComponent/>
+     {/* Heading */}
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+
         <h2 className="text-sm title-font text-gray-500 tracking-widest">
           Branded Tops
         </h2>
-        <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-          The Black stylish Top
+        <h1 className=" text-2xl font-semibold tracking-tight mb-3 text-myblack" >
+          The stylish Top and Jeans
         </h1>
+
+        {/* rating */}
+        <div className="rating mt-1">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-myOrange" />
+  <input
+    type="radio"
+    name="rating-2"
+    className="mask mask-star-2 bg-orange-400"
+    defaultChecked />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-myOrange" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-myOrange" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-myOrange" />
+</div>
+<div className='divider'></div>
         {/* <div className="flex mb-4">
           <span className="flex items-center">
             <svg
@@ -116,6 +136,8 @@ const Product = () => {
             </a>
           </span>
         </div> */}
+
+        {/* discription */}
         <p className="leading-relaxed">
           Fam locavore kickstarter distillery. Mixtape chillwave tumeric
           sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps
@@ -123,15 +145,18 @@ const Product = () => {
           tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean
           shorts keytar banjo tattooed umami cardigan.
         </p>
-        <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+        {/* color */}
+        <div className="flex mt-6 items-center  mb-5">
           <div className="flex">
-            <span className="mr-3">Color</span>
-            <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" />
-            <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none" />
-            <button className="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none" />
-          </div>
+            <span className="mr-3 scroll-m-20 text-bs font-semibold tracking-tight text-myblack">Color</span>
+           <button className="border-2 border-gray-300 mr-1 bg-white rounded-full w-6 h-6 focus:outline-none active:border-myblackpara focus:border-myblackpara" />
+           <button className="border-2 border-gray-300 mr-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none active:border-myblackpara focus:border-myblackpara" />
+           <button className="border-2 border-gray-300 mr-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none active:border-myblackpara focus:border-myblackpara" />
+           <button className="border-2 border-gray-300 mr-1 bg-myblack rounded-full w-6 h-6 focus:outline-none active:border-myblackpara focus:border-myblackpara" />
+         </div>
+         {/* size */}
           <div className="flex ml-6 items-center">
-            <span className="mr-3">Size</span>
+            <span className="mr-3 scroll-m-20 text-bs font-semibold tracking-tight text-myblack">Size</span>
             <div className="relative">
               <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
                 <option>SM</option>
@@ -139,40 +164,27 @@ const Product = () => {
                 <option>L</option>
                 <option>XL</option>
               </select>
-              <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  className="w-4 h-4"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </span>
-            </div>
+             </div>
           </div>
         </div>
-        <div className="flex">
-          <span className="title-font font-medium text-2xl text-gray-900">
+        {/* quantity */}
+        <div className='flex item-center'>
+        <span className="mr-3 scroll-m-20 text-bs font-semibold tracking-tight text-myblack">Quantity</span>
+        <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl  bottom-2 right-2 w-fit h-fit'><FaPlus className='mr-2 w-4 h-4 group-hover:text-myOrange'/>Add</Button>
+        <div className='ml-2 mr-2 scroll-m-20 text-bs font-semibold tracking-tight'>1</div>
+        <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl  bottom-2 right-2 w-fit h-fit'><FaMinus className='mr-2 w-4 h-4 group-hover:text-myOrange'/>Less</Button>
+        </div>
+        {/* add to cart and buy now */}
+        <div className='divider'></div>
+        <div className="flex item-center justify-between">
+          {/* price */}
+         <span className="title-font font-medium text-2xl text-gray-900">
             $58.00
           </span>
-          <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl  bottom-2 right-2'><HiShoppingCart className='mr-2 w-2 h-4 group-hover:text-myOrange'/>Add to Cart</Button>
-          <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-            <svg
-              fill="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-            </svg>
-          </button>
+          <Button className='group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl  bottom-2 right-2'><HiShoppingCart className='mr-2 w-4 h-4 group-hover:text-myOrange'/>Add to Cart</Button>
+          
         </div>
+        <Button className=' mt-2 w-full group bg-myblack hover:bg-transparent text-mywhite hover:text-myblack scroll-m-20 text-xs font-semibold tracking-tight rounded-xl  bottom-2 right-2'><FaHeart className='mr-2 w-4 h-4 group-hover:text-myOrange'/>Buy Now</Button>
       </div>
    
     </div>

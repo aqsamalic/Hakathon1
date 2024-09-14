@@ -49,7 +49,14 @@ import { SellingCard } from './SellingCard';
       <div className='flex flex-wrap justify-center gap-5'>
         {
          bestSell.map((item,i)=>(
-        <SellingCard key={i}  src={item.src} alt={item.alt} title={item.title} discription={item.discription} price={item.price} category={item.category} Products={item.Products} />))
+        <SellingCard key={i}  
+        src={item.src} 
+        alt={item.alt} 
+        title={item.title} 
+        discription={item.discription} 
+        price={item.price} 
+        category={item.category} 
+        Products={item.Products} />))
       }
 
       </div>

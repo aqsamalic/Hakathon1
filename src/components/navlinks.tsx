@@ -18,25 +18,25 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Tops",
-    href: "/top",
+    href: "/Tops",
     description:
       "Get in on the cool stuff.A collection of beautifull tops to help you look and feel your best.",
   },
   {
     title: "Pants",
-    href: "/pants",
+    href: "/Pants",
     description:
       "Get in on the cool stuff.A collection of stylish pants to help you look and feel your best.",
   },
   {
     title: "Shoes",
-    href: "/shoes",
+    href: "/Shoes",
     description:
       "Get in on the cool stuff.A collection of stylish shoes to help you look and feel your best.",
   },
   {
     title: "Accessories/Jewelery",
-    href: "/jewelery",
+    href: "/Accessories",
     description:
       "Get in on the cool stuff.A collection of beautifull Accessories and jewelery to help you look and feel your best.",
   },
@@ -60,13 +60,17 @@ const components: { title: string; href: string; description: string }[] = [
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-mywhite ">
               {components.map((component) => (
-                <ListItem
+                <Link
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  legacyBehavior
+                  passHref
                 >
+                  <ListItem  title={component.title}>
                   {component.description}
-                </ListItem>
+                  </ListItem>
+                </Link>
               ))}
             </ul>
           </NavigationMenuContent>

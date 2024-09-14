@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/Footer";
+import Providers from "./Provider";
 
 
 
@@ -23,9 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-mywhite`}>
         <div className="max-w-[90%] mx-auto">
+          <Providers>
         <Navbar/>
         {children}
        <Footer/>
+       </Providers>
         </div>
         </body>
     </html>

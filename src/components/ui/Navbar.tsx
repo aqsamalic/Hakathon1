@@ -25,15 +25,15 @@ export default function Navbar(){
             <summary>Women</summary>
             <ul className="p-2 ">
               <li>
-                <Link href={'/top'}>Tops</Link> 
+                <Link href={'/Tops'}>Tops</Link> 
               </li>
               <li>
-                <Link href={'/pants'}>Pants</Link>
+                <Link href={'/Pants'}>Pants</Link>
               </li>
               <li>
-                <Link href={'/jewelery'}>Accessories/Jwelery</Link>
+                <Link href={'/Accessories'}>Accessories/Jwelery</Link>
               </li>
-              <li><Link href={'/shoes'}>Shoes</Link></li>
+              <li><Link href={'/Shoes'}>Shoes</Link></li>
              
 
             </ul>
@@ -53,14 +53,14 @@ export default function Navbar(){
      
      </div> 
          
-    <div className='hidden lg:flex' >  < NavigationMenuDemo/></div>
+    <div className='hidden lg:flex group' >  < NavigationMenuDemo/></div>
     <div className="navbar-end group">
-    <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className=" pr-4 ">
+      <Link href={"/Cart"}>
+      <div tabIndex={0} role="button" className=" pr-4">
         <div className="indicator">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7 cursor-pointer  group-hover:text-myOrange duration-100"
+            className="h-7 w-7 cursor-pointer   group-hover:text-myOrange duration-100"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor">
@@ -74,20 +74,9 @@ export default function Navbar(){
           <span className="badge badge-sm indicator-item text-myblackpara group-hover:text-mywhite group-hover:bg-myblack">8</span>
         </div>
       </div>
-      <div
-        tabIndex={0}
-        className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
-        <div className="card-body">
-          <span className="text-lg font-bold">8 Items</span>
-          <span className=" text-myblackpara">Subtotal: $999</span>
-          <div className="card-actions">
-            <button className="btn bg-myOrange btn-block">View cart</button>
-          </div>
-        </div>
+      </Link>
       </div>
-    </div>
-          </div>
-        </div>
+      </div>
       </div>
   
   
