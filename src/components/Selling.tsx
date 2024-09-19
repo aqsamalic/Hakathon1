@@ -8,7 +8,7 @@ import { SellingCard } from './SellingCard';
       src:"/pictures/Top1 (2).jpg",
       alt:"Dress shirt",
       title:"Stylish Dress",
-      discription:" Best quality dress shirt for  women.",
+      description:" Best quality dress shirt for  women.",
       price:200,
       category:"Tops",
       Products:"Tops",
@@ -18,7 +18,7 @@ import { SellingCard } from './SellingCard';
       src:"/pictures/pant5.jpg",
       alt:"Brand pants",
       title:"Stylish Dress Pants",
-      discription:" Best quality dress Pants for  women.",
+      description:" Best quality dress Pants for  women.",
       price:250,
       category:"Pants",
       Products:"Pants",
@@ -27,7 +27,7 @@ import { SellingCard } from './SellingCard';
       src:"/pictures/shoe5.jpg",
       alt:"Shoes",
       title:"Stylish Shoes",
-      discription:" Best quality top notch shoes for  women.",
+      description:" Best quality top notch shoes for  women.",
       price:300,
       category:"Shoes",
       Products:"Shoes",
@@ -53,7 +53,7 @@ import { SellingCard } from './SellingCard';
         src={item.src} 
         alt={item.alt} 
         title={item.title} 
-        discription={item.discription} 
+        description={item.description} 
         price={item.price} 
         category={item.category} 
         Products={item.Products} />))
